@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://c21rhih2bgux5"]
+
+[ext_resource type="Script" uid="uid://nxmqnvb1yc8l" path="res://Script/pause_menu.gd" id="1_nwcfo"]
+[ext_resource type="PackedScene" uid="uid://bkub0tfghoxf4" path="res://Scene/settings_container.tscn" id="2_05uyy"]
+
+[node name="PauseMenu" type="CanvasLayer" unique_id=848728360]
+process_mode = 3
+visible = false
+script = ExtResource("1_nwcfo")
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1285739428]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -223.0
+offset_top = -240.0
+offset_right = 223.0
+offset_bottom = 240.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1661592163]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=706461607]
+layout_mode = 2
+
+[node name="Paused" type="Label" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1700014127]
+layout_mode = 2
+text = "PAUSED"
+
+[node name="Settings" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=1510693121]
+layout_mode = 2
+size_flags_vertical = 4
+text = "SETTINGS"
+
+[node name="Quit" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=198017710]
+layout_mode = 2
+size_flags_vertical = 4
+text = "QUIT"
+
+[node name="Resume" type="Button" parent="PanelContainer/MarginContainer/VBoxContainer" unique_id=913694005]
+layout_mode = 2
+size_flags_vertical = 4
+text = "RESUME"
+
+[node name="SettingsContainer" parent="." unique_id=826146451 instance=ExtResource("2_05uyy")]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 353.0
+offset_top = 84.0
+offset_right = 799.0
+offset_bottom = 564.0
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]

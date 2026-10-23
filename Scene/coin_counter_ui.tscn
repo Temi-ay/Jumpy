@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://coafhfj82j53c"]
+
+[ext_resource type="Script" uid="uid://bvqgsfw351mx8" path="res://Script/coin_counter_ui.gd" id="1_2hggx"]
+[ext_resource type="Texture2D" uid="uid://dvp6kucthjkaw" path="res://assets/sprites/Screenshot 2026-10-02 151949.png" id="2_me3ew"]
+
+[node name="CoinCounterUI" type="CanvasLayer" unique_id=1497807123]
+script = ExtResource("1_2hggx")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1785101548]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer" unique_id=1171463586]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+texture = ExtResource("2_me3ew")
+expand_mode = 2
+
+[node name="CoinLabel" type="Label" parent="HBoxContainer" unique_id=1949394133]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+text = "0"
+
+[node name="BestLabel" type="Label" parent="HBoxContainer" unique_id=128725313]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Best: 0 "
