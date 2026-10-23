@@ -3,7 +3,7 @@
 A small 2D platformer made in Godot. Run, jump, collect coins, dodge slimes, and reach the door to win
 
 ## ScreenShot
-![Jumpy Image]()
+![Jumpy Image](Screenshot_23-10-2026_201557_gracetem.itch.io.jpeg)
 
 ## Try It
 [Demo Link](https://gracetem.itch.io/jumpy)
@@ -23,5 +23,5 @@ Coin counter and Best score
 ## Built with
 Godot Engine
 
-##Credits
+## Credits
 [Grace](https://github.com/Temi-ay)
